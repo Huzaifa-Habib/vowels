@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Catch vowels</title>
+</head>
+<body>
+    <span class="main-heading">Vowels</span> <br>
+
+    <div class="vowels">
+        <span class="a">a</span> <span class="e">e</span> <span class="i">i</span>
+         <span class="o">o</span> <span class="u">u</span> 
+
+    </div>
+    <br>
+
+<div class="input">
+    <p class="ins">Enter any legit word to check it consists of vowels or not...</p>
+    <input type="text" id="value" placeholder="Example: Word" > <br>
+    <p id="error"></p>
+
+    <button onClick="save()" class="btn">Submit</button>
+</div>
+
+  
+<div class="result">
+    <div class="vowelss">
+        <p> <span class="z">Vowels Words:</span> <span id="vowel"><br></span></p>
+    </div>
+
+    <div class="words">
+        <p> <span class="x">Normal Words:</span> <span id="word"> <br></span> </p>
+    </div>
+
+</div>
+
+
+    
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

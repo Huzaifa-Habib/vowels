@@ -5,10 +5,12 @@
 function save () {
     var vowels=[];
     var word = [];  
+    var bol = false;
     
     var input = document.getElementById("value").value;
     input = input.toLowerCase();
     var error =document.getElementById("error");
+    
 
     if (input === "") {
         error.style.color = "red";
@@ -22,28 +24,31 @@ function save () {
     for (var i = 0; i < input.length; i++ ) {
 
     if (input[i] === "a" || input[i] === "e" || input[i] === "i" || input[i] === "o" || input[i] === "u"  ){
-        vowels.push(input);
+        // vowels.push(input);
+        bol = true;
         break;
     }
 
-    else  {
-        word.push(input)
-        
-        
+    }
+
+
+    if (bol == true)  {
+        vowels.push(input);
+        document.getElementById("vowel").innerHTML+=". "+vowels + "<br>"
+
+           
+    }
+
+    else {
+        bol = false;
+        word.push(input);
+        document.getElementById("word").innerHTML+=". "+word + "<br>"
+
+
+
     }
 }
 
-for (var v =0; v< vowels.length; v++) {
-    
-    document.getElementById("vowel").innerHTML+=vowels[v] + "<br>"
-}
-for (var w =0; w< word.length; w++) {
 
-    document.getElementById("word").innerHTML+=word[v] + "<br>"
-}
-
-
-
-}
 
 
